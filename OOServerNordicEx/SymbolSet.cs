@@ -8,7 +8,7 @@ using System.Data;
 using System.Collections;
 using System.Reflection;
 
-namespace OOServerNordicEx 
+namespace OOServerNordicEx
 {
     partial class SymbolSet
     {
@@ -30,7 +30,7 @@ namespace OOServerNordicEx
                 return null;
             }
         }
-    
+
         public void Load()
         {
             try

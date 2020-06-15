@@ -1,4 +1,4 @@
-﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
   <PropertyGroup>
     <PublishUrlHistory>ftp://www.samoasky.com/clickonce/optionsoracle/|http://www.samoasky.com/clickonce/optionsoracle/|http://www.samoasky.com/download/optionsoracle/|C:\|c:\</PublishUrlHistory>
     <InstallUrlHistory>http://www.samoasky.com/clickonce/optionsoracle/|http://www.samoasky.com/download/optionsoracle/|http://www.samoasky.com/optionsoracle/|http://http.samoasky.com/optionsoracle/</InstallUrlHistory>
@@ -10,6 +10,7 @@
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
     <EnableSecurityDebugging>false</EnableSecurityDebugging>
     <ProjectView>ProjectFiles</ProjectView>
+    <ErrorReportUrlHistory />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <StartArguments>

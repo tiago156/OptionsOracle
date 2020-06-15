@@ -18,14 +18,14 @@ namespace OptionsOracle.DataCenter.Data
         public const string PRM_LAST_SELECTED_RULE = "Last Selected Rule";
         public const string PRM_CREATED_VERSION = "Created with Version";
         public const string PRM_REMOTE_CONFIG = "Remote Configuration";
-        
+
         public const string PRM_USE_PROXY = "Use Proxy";
         public const string PRM_PROXY_ADDRESS = "Proxy Address";
 
         public const string PRM_DEFAULT_IMPORT_FILTER_INDEX = "Default Import Filter Index";
         public const string PRM_DEFAULT_IMPORT_FILENAME = "Default Import FileName";
 
-        private string[] FieldList = new string[] 
+        private string[] FieldList = new string[]
         {
             // underlying
             "Underlying.Symbol",
@@ -58,7 +58,7 @@ namespace OptionsOracle.DataCenter.Data
             "Option.OpenInt",
             "Option.ContractSize",
             "Option.TimeStamp"
-        };        
+        };
 
         public string CurrentVersion
         {
@@ -86,7 +86,7 @@ namespace OptionsOracle.DataCenter.Data
         public string ProxyAddress
         {
             get { return GetParameter(PRM_PROXY_ADDRESS); }
-            set { SetParameter(PRM_PROXY_ADDRESS, value);}
+            set { SetParameter(PRM_PROXY_ADDRESS, value); }
         }
 
         public string GetRemoteConfigurationUrl
@@ -181,7 +181,7 @@ namespace OptionsOracle.DataCenter.Data
 
             ParametersTable.AddParametersTableRow(PRM_USE_PROXY, bool.FalseString);
             ParametersTable.AddParametersTableRow(PRM_PROXY_ADDRESS, "");
-            
+
             ParametersTable.AddParametersTableRow(PRM_DEFAULT_IMPORT_FILTER_INDEX, "1");
             ParametersTable.AddParametersTableRow(PRM_DEFAULT_IMPORT_FILENAME, "");
 

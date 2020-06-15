@@ -8,7 +8,7 @@ using System.Data;
 using System.Collections;
 using System.Reflection;
 
-namespace OOServerPhiladelphia 
+namespace OOServerPhiladelphia
 {
     partial class SymbolSet
     {
@@ -29,7 +29,7 @@ namespace OOServerPhiladelphia
                 return null;
             }
         }
-    
+
         public void Load()
         {
             try

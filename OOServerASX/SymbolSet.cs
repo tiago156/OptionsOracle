@@ -108,7 +108,7 @@ namespace OOServerASX
 
         private bool New()
         {
-            WebCapture cap = new WebCapture();            
+            WebCapture cap = new WebCapture();
 
             // setup web-capture configuration
             cap.UseProxy = UseProxy;

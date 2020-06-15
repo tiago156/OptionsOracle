@@ -1,4 +1,4 @@
-﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="Current">
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
@@ -24,7 +24,7 @@
     </FileUpgradeFlags>
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
-    <OldToolsVersion>2.0</OldToolsVersion>
+    <OldToolsVersion>3.5</OldToolsVersion>
     <PublishUrl>ftp://www.samoasky.com/clickonce/optionsoracle/</PublishUrl>
     <Install>true</Install>
     <InstallFrom>Web</InstallFrom>
@@ -90,6 +90,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Deployment" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
@@ -99,12 +100,9 @@
     <Reference Include="ZedGraph, Version=5.0.10.8624, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Core.cs">
-      <SubType>Component</SubType>
-    </Compile>
+    <Compile Include="Core.cs" />
     <Compile Include="Data\AnalysisSet.cs">
       <DependentUpon>AnalysisSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\AnalysisSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -120,7 +118,6 @@
     <Compile Include="Data\LinksConfig.cs" />
     <Compile Include="Data\LookupSet.cs">
       <DependentUpon>LookupSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\TableConfig.cs" />
     <Compile Include="Forms\AboutForm.cs">
@@ -153,7 +150,6 @@
     <Compile Include="Calc\Indicators\JScriptEvaluator.cs" />
     <Compile Include="Data\HistorySet.cs">
       <DependentUpon>HistorySet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\HistorySet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -227,7 +223,6 @@
     </Compile>
     <Compile Include="Data\ConfigSet.cs">
       <DependentUpon>ConfigSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\ConfigSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -283,7 +278,6 @@
     <Compile Include="Calc\Options\OptionMath.cs" />
     <Compile Include="Data\OptionsSet.cs">
       <DependentUpon>OptionsSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\OptionsSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -305,7 +299,6 @@
     </Compile>
     <Compile Include="Data\PortfolioSet.cs">
       <DependentUpon>PortfolioSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\PortfolioSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -459,7 +452,6 @@
     </Compile>
     <Compile Include="Data\VolatilitySet.cs">
       <DependentUpon>VolatilitySet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\VolatilitySet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -487,7 +479,6 @@
     </Compile>
     <Compile Include="Data\WizardSet.cs">
       <DependentUpon>WizardSet.xsd</DependentUpon>
-      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Data\WizardSet.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -661,6 +652,11 @@
       <ProductName>.NET Framework 3.5</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
     <PublishFile Include="ZedGraph">
@@ -670,6 +666,7 @@
       <TargetPath>
       </TargetPath>
       <PublishState>Exclude</PublishState>
+      <IncludeHash>True</IncludeHash>
       <FileType>Assembly</FileType>
     </PublishFile>
   </ItemGroup>

@@ -23,7 +23,6 @@ using System.Text;
 using System.Data;
 using Microsoft.JScript;
 using Microsoft.JScript.Vsa;
-using Microsoft.Vsa;
 using System.Globalization;
 
 using OptionsOracle.Data;

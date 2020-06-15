@@ -8,7 +8,7 @@ using System.Data;
 using System.Collections;
 using System.Reflection;
 
-namespace OOServerInteractiveBrokers 
+namespace OOServerInteractiveBrokers
 {
     partial class MappingSet
     {
